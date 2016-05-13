@@ -1,0 +1,66 @@
+/*------USAGE
+* .class {
+*    .mix-rem (padding, 10 0 20 8);
+*    .mix-rem (font-size, 24);
+* }
+------*/
+
+@function calc-rem($target) {
+   @return ($target / $basefont-size) * 1rem;
+}
+
+.clearfix:after {
+   content: " ";
+   visibility: hidden;
+   display: block;
+   height: 0;
+   clear: both;
+}
+
+.pos-right-bottom {
+	position: absolute;
+	bottom: 0;
+	right: 20px;
+}
+
+//Display element only on tablet
+.tablet-shown {
+  display: none!important;
+  @include breakpoint(tablet) {
+    display: inline-block!important;
+  }
+  @include breakpoint(mobile) {
+    display: none!important;
+  }
+}
+
+//Display element only on mobile
+.mobile-shown {
+  display: none!important;
+  @include breakpoint(tablet) {
+    display: none!important;
+  }
+  @include breakpoint(mobile) {
+    display: inline-block!important;
+  }
+}
+
+//Hide element only on mobile
+.mobile-hidden {
+    @include breakpoint(mobile) {
+      display: none!important;
+    }
+  }
+
+//Flatten container
+.flatten {
+  .container {
+  margin-top: 0;
+  }
+}
+
+//Article Text Bolded Blue
+.bolded-blue {
+  font-family: $frank-heavy;
+  color: $cl-blue;
+}

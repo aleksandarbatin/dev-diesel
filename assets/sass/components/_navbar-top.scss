@@ -1,0 +1,137 @@
+// FIXED NAVBAR TOP
+
+.navbar-top {
+	@include breakpoint(mobile) {
+		display:none;
+	}
+	.container {
+		position:relative;
+	}
+	text-align: center;
+	padding-top: 10px;
+	position:fixed;
+	height: 80px;
+	top:0;
+	left:0;
+	right:0;
+	@include blue-gradient;
+	z-index: 5;
+	width:100%;
+	@include breakpoint(tablet) {
+		height:60px;
+		padding-top: 5px;
+	}
+	.social-icons {
+		display: none;
+	}
+	.social-icons-navtop {
+		display:inline-block;
+		float: right;
+    padding: 5px 0px 5px 0px;
+    li {
+    	padding-right: 10px;
+    	@media screen and (max-width: 848px)  {
+			padding-right: 3px;
+		  }	
+    }
+    li:last-child {
+    	padding-right: 0;
+    }
+	}
+	.logo {
+		display:inline-block;
+		padding: 0;
+		position:relative;
+		float:left;
+		h1 {
+			font-size: calc-rem(30px);
+			letter-spacing: calc-rem(5px);
+			color:$cl-white;
+			span {
+				border-bottom: 2px solid white;
+			}
+		}
+		a {
+			img:nth-of-type(1){
+				display:none;
+			}
+			img:last-child {
+				display:inline-block;
+				width:30px;
+				vertical-align: bottom;
+				@media screen and (max-width: 848px)  {
+				width:25px;
+		  	}	
+			}
+		}
+	}
+	.header-item {
+		display:none;
+	}
+	.header_menu {
+		position:static;
+		display:inline-block;
+		padding-top: 8px;
+		@include breakpoint(tablet) {
+			padding-top: 5px;
+		}
+		li {
+			width:auto;
+		}
+		li:last-child {
+			img:first-child {
+				display:none;
+			}
+			img:last-child {
+				display:inline-block;
+				width:16px;
+				vertical-align: middle;
+			}
+		}
+		.dropdown {
+			font-size: calc-rem(16px);
+  		letter-spacing: calc-rem(4px);
+  		width:auto;
+  		@media screen and (max-width: 848px)  {
+			letter-spacing: cacl-rem(1px);
+		  }	
+			a {
+				color:$cl-white;
+			}
+		}
+		.dropdown:hover span {
+			margin-bottom: 25px; 
+		  border-bottom: 2px solid white;
+		}
+		hr {
+			border: 1px solid white;
+			margin:0 35px;
+			@media screen and (max-width: 1286px) {
+  		  margin:0 25px;
+  		}
+  		@media screen and (max-width: 1200px) {
+  		  margin:0 15px;
+  		}
+  		@include breakpoint(tablet) {
+  			margin:0 10px;
+  		}
+  		@media screen and (max-width: 895px)  {
+			  margin:0 5px;
+		  }	
+  		@media screen and (max-width: 768px)  {
+			  margin:0 3px;
+		  }	
+		}
+		.dropdown__content {
+			padding-top: 0;
+			height: auto;
+			box-shadow: 0 6px 35px 0 rgba(0, 0, 0, 0.6);
+			@include breakpoint(tablet) {
+    		margin-top: -10px;
+  		}
+			a {
+			color:$cl-blue;
+			}
+		}
+	}
+}

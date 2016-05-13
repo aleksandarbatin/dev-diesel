@@ -1,0 +1,48 @@
+@supports (-ms-accelerator:true) {
+  .teaser-second .teaser__most {
+    top: -630px;
+    @include breakpoint(tablet) {
+      top: 0;
+    }
+  }
+  .video-wide {
+    top: -200px!important;
+    @include breakpoint(tablet) {
+      top: 0!important;
+    }
+  }
+  .teaser .teaser__portrait .content {
+    width: 40%!important;
+    font-size: calc-rem(14px)!important;
+    top: 55%!important;
+    @media screen and (max-width: 1185px) {
+      top: 60%!important;
+    }
+    @media screen and (max-width: 1033px) {
+      top: 68%!important;
+    }
+    @media screen and (max-width: 810px) {
+      width: 29%!important;
+    }
+  }
+  .teaser-third {
+    top: -80px;
+  @include breakpoint(tablet) {
+    top: 0;
+  }
+  }
+
+//Entertainment
+#ent {
+  .video-wide {
+    top: 0!important;
+  }
+  .ent-teaser-second .container .teaser__box:nth-of-type(3) {
+    margin-bottom: 100px!important;
+  }
+}
+  //Article
+  .teaser-article .teaser-boc:nth-of-type(6) {
+    top: 0;
+  }
+}

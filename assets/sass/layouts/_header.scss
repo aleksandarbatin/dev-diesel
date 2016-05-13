@@ -1,0 +1,311 @@
+// HEADER //
+
+.header {
+	padding-top:calc-rem(30px);
+}
+
+.social-icons {
+  float: left;
+  margin-left: 4%;
+	@include breakpoint(mobile) {
+		display: none;
+	}
+  li {
+  	padding-right: calc-rem(25px);
+  }
+  li:last-child {
+      padding: calc-rem(5px) calc-rem(25px);
+      background-color: #f7f6f7;
+      vertical-align: text-bottom;
+    span {
+    font-family: $frank-book;
+    font-size: calc-rem(11px);
+    color: #b7b7b7;
+    text-transform: uppercase;
+    margin-left: calc-rem(5px);
+    }
+  }
+}
+
+.social-icons-navtop {
+	display:none;
+}
+
+.header-item {
+  float: right;
+  font-family: $frank-mid;
+  font-size: calc-rem(14px);
+  color: #000;
+  text-transform: uppercase;
+  margin-right: 3%;
+	@include breakpoint(mobile) {
+		margin-right: 5%;
+	}
+  span {
+  	vertical-align: super;
+		@include breakpoint(mobile) {
+			display: block;
+		}
+  }
+	img {
+		@include breakpoint(mobile) {
+			width: 75px;
+		}
+	}
+}
+
+.logo {
+  text-align: center;
+  padding: calc-rem(40px) 0 calc-rem(73px);
+  clear: both;
+	font-size: calc-rem(10px);
+	@include breakpoint(tablet) {
+	 padding: calc-rem(45px) 0 calc-rem(61px);
+	}
+	@include breakpoint(mobile) {
+		margin-right: -7px;
+	}
+  h1 {
+  font-family: $frank-heavy;
+  text-transform: uppercase;
+  font-size: calc-rem(50px);
+  letter-spacing: calc-rem(12px);
+  display: inline-block;
+  color:$cl-black;
+	position: relative;
+	@include breakpoint(mobile) {
+		font-size: calc-rem(34px);
+		letter-spacing: calc-rem(12px);
+	}
+	span {
+		display: inline-block;
+		border-bottom: 3px solid $cl-blue;
+		padding-bottom: 0px;
+		width: 33%;
+		position: absolute;
+		bottom: -2px;
+		right: 8%;
+		@include breakpoint(tablet) {
+			line-height: calc-rem(18px);
+			}
+		}
+  }
+  a {
+	  img:nth-of-type(1){
+	  vertical-align: middle;
+	  @include breakpoint(mobile) {
+			width:40px;
+			margin-top: -5px;
+	    }
+	  }
+	  img:last-child {
+	  	display:none;
+	  }
+	}
+}
+
+.header_menu {
+	position:relative;
+	clear: both;
+	height: calc-rem(40px);
+  text-align: center;
+	@include breakpoint(tablet) {
+		height: calc-rem(60px);
+	}
+	@include breakpoint(mobile) {
+		display: none;
+	}
+  li {
+	display: inline-block;
+  font-family: $frank-cndmed;
+  text-transform: uppercase;
+  font-size: calc-rem(18px);
+  letter-spacing: calc-rem(10px);
+	 @include breakpoint(tablet) {
+	 font-size: calc-rem(16px);
+	 }
+  }
+	li:last-child {
+		img:last-child {
+			display:none;
+		}
+	}
+  li:nth-child(2n+2) {
+    width: 8%;
+    @media screen and(max-width:1200px) {
+    	width:6%;
+    }
+    @media screen and(max-width:920px) {
+    	width:4%;
+    }
+    @media screen and(max-width:820px) {
+    	width:2.8%;
+    }
+	}
+  hr {
+    width: calc-rem(5px);
+    display: inline-block;
+    border: 1px solid black;
+    vertical-align: middle;
+  }
+}
+
+// IMAGES-VIEWER
+
+.images__viewer {
+  position: relative;
+  z-index: 1;
+	text-align: center;
+	img {
+	width: 100%;
+	}
+}
+
+.images__bgviewer {
+  position: absolute;
+  margin-top: calc-rem(30px);
+  width: 100%;
+  height: calc-rem(440px);
+  z-index: -1;
+  @include blue-gradient;
+	@include breakpoint(tablet) {
+		height: calc-rem(320px);
+	}
+	@include breakpoint(mobile) {
+		display: none;
+	}
+}
+
+.images__viewer-content {
+  @include blue-gradient;
+  position: relative;
+  width: calc-rem(390px);
+  height: auto;
+	padding-bottom: 40px;
+  z-index: 2;
+	top: calc-rem(-245px);
+	right: 0;
+	left: 57%;
+    @include shadow;
+	text-align: left;
+	@include breakpoint(tablet) {
+		top: calc-rem(-240px);
+		width: 34%;
+		padding-bottom: 30px;
+	}
+	@include breakpoint(mobile) {
+		width: 75%;
+    top: -4.875rem;
+    left: 12%;
+    padding-bottom: 30px;
+	}
+	.left-arrow {
+		width: 10px;
+		position: absolute;
+		bottom: 4%;
+		left: -7%;
+		@include breakpoint(mobile) {
+			display: none;
+		}
+	}
+	.right-arrow {
+		width: 10px;
+		position: absolute;
+		bottom: 4%;
+		right: -7%;
+		@include breakpoint(mobile) {
+			display: none;
+		}
+	}
+  .category-title {
+    font-family: $frank-cndmed;
+    text-transform: uppercase;
+    font-size: calc-rem(15px);
+    color: #919ca8;
+    letter-spacing: calc-rem(1px);
+    line-height: calc-rem(23px);
+    padding-top: calc-rem(40px);
+    padding-left: calc-rem(40px);
+		@include breakpoint(tablet) {
+			font-size: calc-rem(18px);
+			padding-top: calc-rem(30px);
+			padding-left: calc-rem(30px);
+		}
+		@include breakpoint(mobile) {
+			padding-left: calc-rem(50px);
+		}
+		span {
+	    display: inline-block;
+	    border-bottom: 1px solid #919ca8;
+	    padding-bottom: 0px;
+			@include breakpoint(tablet) {
+				line-height: calc-rem(18px);
+			}
+	  }
+  }
+  .title {
+    font-family: $frank-demi;
+    font-size: calc-rem(36px);
+    text-transform: uppercase;
+    color: #FFF;
+    padding-top: calc-rem(20px);
+    padding-left: calc-rem(40px);
+		@include breakpoint(tablet) {
+			width: 80%;
+			font-size: calc-rem(28px);
+			padding-top: calc-rem(11px);
+			padding-left: calc-rem(30px);
+		}
+	  @include breakpoint(mobile) {
+			padding-left: calc-rem(50px);
+			width: 90%;
+		}
+  }
+  .subtitle {
+    font-family: $frank-mid;
+    font-weight: 300;
+    font-size: calc-rem(25px);
+    color: #FFF;
+    padding-left: calc-rem(40px);
+    margin-bottom: calc-rem(52px);
+		@include breakpoint(tablet) {
+			padding-left: calc-rem(26px);
+			font-size: calc-rem(20px);
+			padding-left: calc-rem(30px);
+			margin-bottom: calc-rem(15px);
+			width: 78%;
+		}
+	  @include breakpoint(mobile) {
+			display: none;
+		}
+  }
+
+	 .share {
+			color: #b7b7b7;
+			font-size: calc-rem(12px);
+			line-height: calc-rem(24px);
+			margin-left: calc-rem(30px);
+			margin-bottom: calc-rem(16px);
+			@include breakpoint(tablet) {
+				font-size: calc-rem(14px);
+			}
+			@include breakpoint(mobile) {
+				margin-left: calc-rem(50px);
+			}
+	 }
+
+  .read-more {
+    margin-left: 40px;
+    display: inline-block;
+		@include breakpoint (tablet) {
+			padding: calc-rem(17px) calc-rem(29px) calc-rem(15px) calc-rem(30px);
+			margin-left: calc-rem(30px);
+			font-size: calc-rem(16px);
+		}
+		@include breakpoint(mobile) {
+			padding: calc-rem(22px) calc-rem(34px) calc-rem(20px) calc-rem(35px);
+			margin-left: calc-rem(50px);
+			font-size: calc-rem(14px);
+		}
+  }
+}

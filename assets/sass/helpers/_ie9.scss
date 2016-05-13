@@ -1,0 +1,97 @@
+//CSS for IE9
+
+.ie9 {
+  //Index
+  .teaser {
+  margin-bottom: 150px;
+  }
+  .teaser-second .teaser__box:nth-of-type(5) {
+    @include breakpoint(tablet) {
+      top: 0;
+      left: 0;
+    }
+    }
+  .teaser-second .teaser__most {
+    top: -630px;
+    @include breakpoint(tablet) {
+      top: 0;
+    }
+  }
+
+  .teaser-third .teaser-third__wrapper-2 .teaser__box:nth-of-type(4) {
+    margin-right: 0;
+  }
+  .teaser__most {
+    top: 0;
+    @include breakpoint(tablet) {
+      top: -30px;
+    }
+  }
+  .teaser__most__box .teaser__most__content {
+    @include breakpoint(tablet) {
+      display: block;
+    }
+  }
+  .video-wide {
+    top: -280px;
+    @include breakpoint(tablet) {
+      top: 0;
+    }
+    .video__wrapper {
+      @include breakpoint(mobile) {
+        background-size: 100% 0%, cover;
+        padding-top: 10%;
+      }
+    }
+    .video-wide__title .read-more {
+      @include breakpoint(tablet) {
+        margin-right: 14%;
+      }
+    }
+  }
+  .teaser-third {
+    top: -200px;
+    @include breakpoint(tablet) {
+      top: 0;
+    }
+  }
+  .load-more {
+    margin-bottom: 0;
+    @include breakpoint(tablet) {
+      margin-bottom: 100px;
+    }
+  }
+
+
+//Entertainment page
+#ent {
+  .ent__teaser .container .teaser__box .teaser__box-content {
+    @include breakpoint(mobile) {
+      height: auto;
+    }
+  }
+  .ent-teaser-second .container .teaser__box .teaser__box-content {
+    @include breakpoint(mobile) {
+    height: auto;
+  }
+  }
+  .images__viewer .ent__subcategory-menu {
+    @include breakpoint(mobile) {
+      background: none;
+    }
+  }
+  .video-wide {
+    position: static;
+  }
+  .teaser__box-content .read-more {
+    @include breakpoint(tablet) {
+      padding: 16px 15px;
+    }
+    @include breakpoint(mobile) {
+      padding: 16px 10px;
+    }
+
+  }
+}
+ //Article page
+}

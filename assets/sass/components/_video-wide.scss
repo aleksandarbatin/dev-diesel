@@ -1,0 +1,188 @@
+// - VIDEO - WIDE
+
+.video-wide {
+	margin-bottom: calc-rem(160px);
+	clear: both;
+	position: relative;
+	top: -30px;
+	top: -moz-calc(-280px);
+	@include breakpoint(tablet) {
+		top: -moz-calc(0px);
+		margin-bottom: calc-rem(200px);
+	}
+	@include breakpoint(mobile) {
+		margin-bottom: calc-rem(130px);
+	}
+		.video__wrapper {
+			@include blue-gradient;
+			width: 100%;
+			background-image: url("../img/white-bg.jpg"), -webkit-linear-gradient(left, #192840, #376fa7);
+			background-image: url("../img/white-bg.jpg"), -moz-linear-gradient(45deg, #192945, #366ea5);
+			background-size: 100% 40%, cover;
+			background-position: top, bottom;
+			background-repeat: no-repeat, no-repeat;
+			z-index: -1;
+			padding-top: 0;
+			padding-bottom: calc-rem(15px);
+			@include breakpoint(mobile) {
+				padding-bottom: calc-rem(5px);
+				margin-bottom: calc-rem(25px);
+			}
+			img:first-child {
+				position: absolute;
+		    left: 3%;
+		    top: 77%;
+		    z-index: 2;
+		    width: 16%;
+		    height: 20%;
+			@include breakpoint(tablet) {
+				left: 12%;
+				top: 81%;
+				width: calc-rem(114px);
+				height: calc-rem(68px);
+			}
+			@include breakpoint(mobile) {
+				left: 1%;
+				top: 68%;
+				width:50px;
+				height:auto;
+			}
+			}
+			img:nth-child(2) {
+		  z-index: 1!important;
+		  position:relative;
+		  margin-bottom: calc-rem(20px);
+			width: 80%;
+			height: 60%;
+			@include breakpoint(tablet) {
+				width: 70%;
+				height: 50%;
+			}
+			@include breakpoint(mobile) {
+				width: 80%;
+				height: 60%;margin-bottom: 0;
+			}
+			}
+			img:nth-of-type(3) {
+				z-index: 4;
+				position: absolute;
+				top: 38%;
+				left: 47%;
+			}
+			.category-title {
+			text-align: left;
+			position:relative;
+			left: 25%;
+			@include breakpoint(tablet) {
+				left: 28%;
+			}
+			@include breakpoint(mobile) {
+				left: 43%;
+			}
+			span {
+				display: inline-block;
+				border-bottom: 1px solid $cl-white;
+				padding-bottom: 0px;
+				@include breakpoint(mobile) {
+					margin-bottom: 8px;
+					margin-top: 8px;
+				}
+			}
+			}
+		}
+
+		.video-wide__title {
+			@include breakpoint(mobile) {
+				text-align: center;
+			}
+			.video-wide__title__body {
+				padding-left: 25%;
+				width: 65%;
+				float: left;
+				@include breakpoint(tablet) {
+					width: 62%;
+				}
+				@include breakpoint(mobile) {
+					padding-left: 0;
+					display: block;
+					width: 100%;
+				}
+				.title {
+				 font-family: $frank-demi;
+	 		   font-size: calc-rem(29px);
+	 		   line-height: calc-rem(27px);
+	 		   text-transform: uppercase;
+	 		   color:$cl-black;
+				 @include breakpoint(tablet) {
+					 margin-bottom: calc-rem(10px);
+					 font-size: calc-rem(24px);
+				 }
+				 @include breakpoint(mobile) {
+					 font-size: calc-rem(26px);
+					 margin-bottom: calc-rem(25px);
+				 }
+				}
+				.content {
+					font-size: calc-rem(18px);
+					@include breakpoint(tablet) {
+ 					 margin-bottom: calc-rem(15px);
+ 				 }
+					@include breakpoint(mobile) {
+ 					 display: none;
+ 				 }
+				}
+				.share {
+					display: none;
+					@include breakpoint(tablet) {
+						display: block;
+						font-size: calc-rem(16px);
+					}
+				}
+			}
+			.read-more {
+				margin-right: 10%;
+				float: left;
+				@include blue-gradient;
+		    color:$cl-white;
+		    padding: calc-rem(20px) calc-rem(80px);
+		    font-size: calc-rem(16px);
+				@include breakpoint(tablet) {
+					margin-right: 15%;
+    			float: right;
+				}
+				@include breakpoint(mobile) {
+					float: none;
+					margin-right: 0;
+					padding: 15px 35px;
+				}
+			}
+		}
+
+&:hover {
+  .video-fist-animation {
+    animation: animationFrames linear 0.5s;
+    animation-iteration-count: 2;
+    transform-origin: 30% 30%;
+    -webkit-animation: animationFrames linear 0.5s;
+    -webkit-animation-iteration-count: 2;
+    -webkit-transform-origin: 30% 30%;
+    -moz-animation: animationFrames linear 0.5s;
+    -moz-animation-iteration-count: 2;
+    -moz-transform-origin: 30% 30%;
+    -o-animation: animationFrames linear 0.5s;
+    -o-animation-iteration-count: 2;
+    -o-transform-origin: 30% 30%;
+    -ms-animation: animationFrames linear 0.5s;
+    -ms-animation-iteration-count: 2;
+    -ms-transform-origin: 30% 30%;
+  }
+  @-webkit-keyframes animationFrames {
+    0%, 100% {
+      -webkit-transform:   scale(1.00);
+    }
+    50% {
+      -webkit-transform:   scale(1.10);
+    }
+  }
+}
+}

@@ -1,0 +1,135 @@
+// COLOR GRADIENTS  //
+
+@mixin blue-gradient {
+	background: -webkit-linear-gradient(45deg, #192945, #366ea5);
+	/* For Safari 5.1 to 6.0 */
+	background: -o-linear-gradient(45deg, #192945, #366ea5);
+	/* For Opera 11.1 to 12.0 */
+	background: -moz-linear-gradient(45deg, #192945, #366ea5);
+	/* For Firefox 3.6 to 15 */
+	background: linear-gradient(45deg, #192945, #366ea5);
+	/* Standard syntax */
+}
+
+@mixin shadow {
+	box-shadow: 0 6px 35px 0 rgba(0, 0, 0, 0.6), 0 10px 30px 0 rgba(0, 0, 0, 0.3);
+}
+
+
+@mixin breakpoint($point) {
+ @if $point == mobile {
+    @media (max-width: 750px)  { @content ; }
+ }
+ @if $point == tablet {
+		@media (max-width: 1024px)  { @content ; }
+ }
+}
+
+//Teaser Box-Content for mobile devices
+@mixin teaser__box__mobile {
+	width: 75%!important;
+	position: relative!important;
+	float: none!important;
+	margin-right: 0!important;
+	margin-bottom: 130px;
+	height: auto;
+}
+
+//Image-wrapper for Teaser Box
+@mixin image-wrapper-content {
+	position: relative;
+	background-size: cover;
+  width: 100%;
+  height: 320px;
+	@include breakpoint(tablet) {
+		width: 100%;
+	}
+	@include breakpoint(mobile) {
+		width: 100%;
+		display: inline-block;
+	}
+	@media screen and (max-width: 550px) {
+		height: 250px;
+	}
+	@media screen and (max-width: 450px) {
+		height: 215px;
+ 	}
+}
+
+//Image Wrapper for Teaser Most
+@mixin image-wrapper-content__most {
+	@include image-wrapper-content;
+	position: static;
+	width: 115px;
+	height: 105px;
+	margin-right: 10px;
+	@include breakpoint(tablet) {
+		height: 140px;
+		margin-bottom: 12px;
+		@media screen and (max-width: 850px) {
+			height: 120px;
+		}
+	}
+	@include breakpoint(mobile) {
+		width: 100%;
+		@media screen and (max-width: 650px) {
+			height: 120px;
+		}
+		@media screen and (max-width: 520px) {
+			height: 100px;
+		}
+		@media screen and (max-width: 450px) {
+			height: 80px;
+		}
+		@media screen and (max-width: 360px) {
+		height: 70px;
+		}
+	}
+}
+
+//Image Wrapper for Teaser Most Half on tablet
+@mixin image-wrapper-content__most-half {
+	@include image-wrapper-content;
+	position: static;
+	width: 115px;
+	height: 105px;
+	margin-right: 10px;
+	@include breakpoint(tablet) {
+		height: 100px;
+		margin-bottom: 12px;
+		@media screen and (max-width: 850px) {
+			height: 80px;
+		}
+	}
+	@include breakpoint(mobile) {
+		width: 100%;
+		height: 158px;
+		@media screen and (max-width: 650px) {
+			height: 130px;
+		}
+		@media screen and (max-width: 560px) {
+			height: 110px;
+		}
+		@media screen and (max-width: 450px) {
+			height: 80px;
+		}
+		@media screen and (max-width: 360px) {
+		height: 70px;
+		}
+	}
+}
+
+//Image Wrapper Social
+@mixin image-wrapper-content__social {
+	position: relative;
+	background-size: cover;
+	height: 390px;
+	width: 100%;
+	z-index: -1;
+	@include breakpoint(tablet) {
+		float: left;
+		width: 50%;
+		background-position: center;
+		height: 310px;
+	}
+}

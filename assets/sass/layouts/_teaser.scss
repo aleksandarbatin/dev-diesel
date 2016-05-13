@@ -1,0 +1,371 @@
+  //  TEASER LAYOUT //
+  * {
+    transition: all 0.3s ease-in-out
+  }
+
+//Teaser Section
+.teaser {
+  margin-top: -200px;
+  margin-top: -moz-calc(-120px);
+  margin-bottom: 0px;
+  margin-bottom: -moz-calc(154px);
+  @include breakpoint(tablet) {
+    margin-bottom: 0px;
+    margin-top: -150px;
+    margin-top: -moz-calc(-50px);
+  }
+  @include breakpoint(mobile) {
+    margin-top: 0;
+    text-align: center;
+  }
+  //Teaser Headphones
+  .teaser__box:nth-of-type(1) {
+  float:left;
+  @include breakpoint(mobile) {
+    @include teaser__box__mobile;
+    float: none;
+    display: inline-block;
+  }
+  .image-wrapper {
+    background-image: url('../../assets/img/headphones.jpg');
+    @include image-wrapper-content;
+    }
+  }
+  //Teaser Hipster
+  .teaser__box:nth-of-type(2) {
+  float:right;
+  margin-right: 0px;
+  @include breakpoint(mobile) {
+    @include teaser__box__mobile;
+    float: none;
+  }
+  .image-wrapper {
+    background-image: url('../../assets/img/hipster.jpg');
+    @include image-wrapper-content;
+    }
+  }
+  //Teaser Girls
+  .teaser__box:nth-of-type(5) {
+  position:relative;
+  top: -100px;
+  float:left;
+  @include breakpoint(tablet) {
+  top:0;
+  float:none;
+  }
+  @include breakpoint(mobile) {
+  @include teaser__box__mobile;
+   left: 0;
+  }
+  .image-wrapper {
+  background-image: url('../../assets/img/girls.jpg');
+  @include image-wrapper-content;
+  }
+  }
+  //Teaser Kanye
+  .teaser__box:nth-of-type(6) {
+    position: relative;
+    float:left;
+    @include breakpoint(tablet) {
+    float:right;
+    margin-right: 0px;
+    left: 0;
+    }
+    @include breakpoint(mobile) {
+     @include teaser__box__mobile;
+     float: none;
+    }
+    .image-wrapper {
+    background-image: url('../../assets/img/box4.jpg');
+    @include image-wrapper-content;
+    }
+  }
+}
+
+// TEASER SECOND SECTION //
+.teaser-second {
+  @include breakpoint(mobile) {
+    text-align: center;
+  }
+  //Teaser Second Jumper
+  .teaser__box:nth-of-type(1) {
+  float:right;
+  margin-right: 0;
+  @include breakpoint(tablet) {
+    float:left;
+    margin-right: 2.75%;
+    width: 48%;
+    height: calc-rem(470px);
+    margin-bottom: 7%;
+  }
+  @media screen and (max-width: 850px) {
+    margin-bottom: 15%;
+  }
+  @include breakpoint(mobile) {
+    @include teaser__box__mobile;
+  }
+  .image-wrapper {
+  background-image: url('../../assets/img/jumper.jpg');
+  @include image-wrapper-content;
+  }
+  }
+  //Teaser Second Games
+  .teaser__box:nth-of-type(5) {
+  float:left;
+  position:relative;
+  top: -220px;
+  @include breakpoint(tablet) {
+    clear: both;
+    float: left;
+    position:initial;
+    margin-bottom: 30px;
+    }
+  @include breakpoint(mobile) {
+    @include teaser__box__mobile;
+    top: 0;
+    left: 0;
+  }
+  .image-wrapper {
+  background-image: url('../../assets/img/games.jpg');
+  @include image-wrapper-content;
+  }
+  }
+  //Teaser Second Flyer
+  .teaser__box:nth-of-type(6) {
+  float:left;
+  position:relative;
+  top:-140px;
+   @include breakpoint(tablet) {
+    float: right;
+    margin-right: 0;
+    position: static;
+    }
+  @include breakpoint(mobile) {
+    @include teaser__box__mobile;
+    top: 0;
+    left: 0;
+  }
+  .image-wrapper {
+  background-image: url('../../assets/img/flyer.jpg');
+  @include image-wrapper-content;
+  }
+  }
+  //Teaser Second Citation
+  .teaser__citation {
+    float:right;
+    @include breakpoint(tablet) {
+      width: 46%;
+    }
+    .teaser__citation__author {
+      top: 0%;
+      @include breakpoint(tablet) {
+        position: relative;
+      }
+    }
+  }
+  //Teaser Second Portrait
+  .teaser__portrait {
+    float:left;
+    width: 31%;
+    @include breakpoint(tablet) {
+      width: 48%;
+    }
+    @include breakpoint(mobile) {
+      width: 100%;
+    }
+  }
+  //Teaser Second Most
+  .teaser__most {
+    .teaser__most__box {
+      .image-wrapper {
+        background-image: url('../../assets/img/xman_most.jpg');
+        @include image-wrapper-content__most;
+      }
+    }
+  }
+}
+
+//TEASER THIRD SECTION
+.teaser-third {
+  position: relative;
+  top: -moz-calc(-200px);
+  @include breakpoint(tablet) {
+    top: -moz-calc(0px);
+  }
+   @include breakpoint(mobile) {
+     text-align: center;
+   }
+ .teaser__box-content {
+   @include breakpoint(mobile) {
+     width: 60%;
+   }
+ }
+ .read-more {
+   @include breakpoint(tablet) {
+     padding: 15px 12px;
+   }
+ }
+ //Section Third Wrapper 1
+ .teaser-third__wrapper-1 {
+   float: left;
+   width: 31%;
+   margin-right: 3.4%;
+   @include breakpoint(tablet) {
+     float: none;
+     width: 100%;
+   }
+   //Section Third Citation Longer
+   .teaser__citation-longer {
+     width: 100%;
+     height: calc-rem(613px);
+     margin-bottom: 22%;
+     @include breakpoint(tablet) {
+       width: 48%;
+       height: calc-rem(574px);
+       margin-bottom: 0;
+     }
+     @include breakpoint(mobile) {
+       width: 100%;
+       margin-bottom: 150px;
+     }
+     .citation {
+       font-size: calc-rem(34px);
+       @include breakpoint(tablet) {
+         font-size: calc-rem(40px);
+         line-height: 1;
+       }
+       @media screen and (max-width: 850px) {
+         font-size: calc-rem(34px);
+         line-height: 1.3;
+       }
+     }
+     .teaser__citation__author {
+        position: relative;
+       left: 0;
+       @include breakpoint(mobile) {
+         position: relative;
+       }
+     }
+   }
+   //Section Third Headphones
+   .teaser__box:nth-of-type(2) {
+     width: 100%;
+     float: left;
+     @include breakpoint(tablet) {
+       float:right;
+       width: 48%;
+       margin-right: 0;
+       margin-bottom: 0;
+       }
+      @media screen and (max-width: 850px) {
+        margin-bottom: 4%;
+      }
+     @include breakpoint(mobile) {
+       @include teaser__box__mobile;
+     }
+     .image-wrapper {
+     background-image: url('../../assets/img/headphones.jpg');
+     @include image-wrapper-content;
+     }
+     }
+ }
+ //Teaser Third Wrapper 2
+ .teaser-third__wrapper-2 {
+   float: right;
+   width: 65.6%;
+   margin-right: 0;
+   margin-bottom: calc-rem(100px);
+   @include breakpoint(tablet) {
+     float: none;
+     width: 100%;
+   }
+   @include breakpoint(mobile) {
+     margin-bottom: 0;
+   }
+   //Teaser Third Most
+   .teaser__most {
+     float: right;
+     width: 47%;
+     position: static;
+     @include breakpoint(tablet) {
+       float: left;
+       width: 48%;
+     }
+     @include breakpoint(mobile) {
+       display: inline-block;
+       width: 75%;
+       height: auto;
+       float: none;
+       margin-bottom: 130px;
+     }
+     .teaser__most__box {
+       .image-wrapper {
+         background-image: url('../../assets/img/xman_most.jpg');
+         @include image-wrapper-content__most-half;
+       }
+     }
+   }
+   //Teaser Third Social
+   .teaser__social {
+     width: 47%;
+     margin-right: 0;
+     height: calc-rem(640px);
+     margin-bottom: 7%;
+     @include breakpoint(tablet) {
+       width: 48%;
+       float: right;
+       height: auto;
+       left: 0;
+     }
+     @include breakpoint(mobile) {
+       width: 100%;
+       margin-bottom: 130px;
+     }
+   }
+   //Teaser Third Obama
+   .teaser__box:nth-of-type(3) {
+     width: 47%;
+     float: left;
+     margin-right: 0;
+     position: relative;
+   @include breakpoint(tablet) {
+     float:left;
+     clear:both;
+     width: 48%;
+     left: 0;
+     }
+    @include breakpoint(mobile) {
+      @include teaser__box__mobile;
+    }
+    .image-wrapper {
+    background-image: url('../../assets/img/obama2.jpg');
+    @include image-wrapper-content;
+    }
+   }
+   //Teaser Third Xman
+   .teaser__box:nth-of-type(4) {
+     width: 47%;
+     float: right;
+     margin-right: 0;
+     margin-bottom: -moz-calc(90px);
+   @include breakpoint(tablet) {
+     width: 48%;
+     float:right;
+     margin-right: 0;
+     position:initial;
+     margin-bottom: 0;
+   }
+    @media screen and (max-width: 850px) {
+      margin-bottom: 8%;
+    }
+   @include breakpoint(mobile) {
+     @include teaser__box__mobile;
+     margin-bottom: 170px;
+   }
+     .image-wrapper {
+       background-image: url('../../assets/img/xmanbig.jpg');
+       @include image-wrapper-content;
+     }
+    }
+   }
+}

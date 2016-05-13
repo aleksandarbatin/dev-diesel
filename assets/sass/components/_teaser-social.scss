@@ -1,0 +1,183 @@
+// - BLUE TEASER SOCIAL
+
+.teaser__social {
+  width: 31%;
+  display:inline-block;
+  position:relative;
+  @include breakpoint(tablet) {
+  display: inline-block;
+  width: 48%;
+  margin-bottom: 7%;
+  }
+  @include breakpoint(mobile) {
+    width: 100%;
+    margin-bottom: 130px;
+  }
+  .social-like {
+    position:absolute;
+    top:20px;
+    left:24px;
+    width:27px;
+  }
+  .image-wrapper {
+    background-image: url('../../assets/img/thomas.jpg');
+    @include image-wrapper-content__social;
+  }
+  &:hover {
+    .fist-animation {
+      animation: animationFrames linear 0.5s;
+      animation-iteration-count: 2;
+      transform-origin: 30% 30%;
+      -webkit-animation: animationFrames linear 0.5s;
+      -webkit-animation-iteration-count: 2;
+      -webkit-transform-origin: 30% 30%;
+      -moz-animation: animationFrames linear 0.5s;
+      -moz-animation-iteration-count: 2;
+      -moz-transform-origin: 30% 30%;
+      -o-animation: animationFrames linear 0.5s;
+      -o-animation-iteration-count: 2;
+      -o-transform-origin: 30% 30%;
+      -ms-animation: animationFrames linear 0.5s;
+      -ms-animation-iteration-count: 2;
+      -ms-transform-origin: 30% 30%;
+    }
+    @-webkit-keyframes animationFrames {
+      0%, 100% {
+        -webkit-transform:   scale(1.00);
+      }
+      50% {
+        -webkit-transform:   scale(1.10);
+      }
+    }
+  }
+}
+
+.teaser__social-content {
+  @include blue-gradient;
+  height:42%;
+  padding: 30px 40px 24px;
+  margin-top: -3px;
+  margin-bottom: 90px;
+  text-align: center;
+  @include breakpoint(tablet) {
+    display: inline-block;
+    width:50%;
+    height: 310px;
+    margin-top: 0px;
+    padding: 40px 0px 24px;
+    margin-bottom: 0;
+    float: right;
+  }
+  .aligner {
+    display:inline-block;
+    vertical-align: top;
+    margin-bottom: calc-rem(17px);
+    @include breakpoint(tablet) {
+      margin-bottom: 16%;
+    }
+  }
+  .title {
+    font-family: $frank-cndmed;
+    font-size: calc-rem(22px);
+    line-height: calc-rem(20px);
+    color: $cl-white;
+    text-transform: uppercase;
+    margin-bottom: calc-rem(5px);
+    @include breakpoint(tablet) {
+      font-size: calc-rem(16px);
+      margin-bottom: calc-rem(6px);
+    }
+    @include breakpoint(mobile) {
+      margin-bottom: 2px;
+    }
+  }
+  .content {
+    font-family: $frank-demi;
+    font-size: calc-rem(16px);
+    line-height: calc-rem(20px);
+    color: #FFF;
+    text-align: center;
+    text-transform: uppercase;
+    margin-bottom: calc-rem(25px);
+    @include breakpoint(tablet) {
+      font-size: calc-rem(20px);
+      margin-right: 4%;
+      margin-left: 4%;
+      line-height: calc-rem(24px);
+      margin-bottom: calc-rem(15px);
+    }
+    @include breakpoint(mobile) {
+      font-size: cacl-rem(16px);
+      line-height: calc-rem(24px);
+      margin-bottom: calc-rem(10px);
+    }
+  }
+  .share {
+    font-size: calc-rem(16px);
+    display:block;
+    text-align: left;
+    margin-bottom: 0;
+    color: $cl-blue;
+    text-transform: uppercase;
+    @include breakpoint(tablet) {
+      font-size: calc-rem(18px);
+    }
+    @include breakpoint(mobile) {
+      font-size: calc-rem(12px);
+    }
+  }
+  img {
+    width:40px;
+    @include breakpoint(mobile) {
+      width:25px;
+      padding-top:3px;
+    }
+  }
+  .read-more {
+    color: $cl-blue;
+    padding:16px 43px;
+    @include breakpoint(tablet) {
+      font-size: calc-rem(14px);
+      padding: 16px 23px;
+    }
+  }
+}
+
+// SECOND TEASER SECTION
+
+.teaser-second {
+  .teaser__social {
+    @include breakpoint(tablet) {
+    float:right;
+    margin-right: 0px;
+    _width: 46%;
+    left: 0
+    }
+    @include breakpoint(mobile) {
+      width: 100%;
+    }
+    &::after {
+      @include breakpoint(tablet) {
+      float:right;
+      }
+    }
+    .image-wrapper {
+      background-image: url('../../assets/img/obama_cloud.jpg');
+    }
+  }
+}
+
+// THIRD TEASER SECTION
+
+.teaser-third {
+  .teaser__social {
+  position:relative;
+  @include breakpoint(tablet) {
+    margin-right: 0px;
+    float:right;
+    }
+  }
+  .image-wrapper {
+    background-image: url('../../assets/img/student.jpg');
+  }
+}

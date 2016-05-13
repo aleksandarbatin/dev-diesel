@@ -1,0 +1,24 @@
+.no-cssgradients {
+  .images__viewer-content,
+  .teaser__box:hover .read-more,
+  .teaser__social-content,
+  .teaser__portrait__header,
+  .teaser .teaser__portrait .read-more,
+  .video__wrapper,
+  .teaser-second .teaser__portrait .read-more,
+  .video-title,
+  .most-title,
+  .load-more .read-more,
+  footer,
+  //Entertainment page elements
+  .video-wide .video-wide__title .read-more,
+  #ent .images__viewer .ent__subcategory-menu,
+  //Article page elements
+  .view-article__text .teaser__citation-longer .citation-wrapper .btn-tweet,
+  .teaser-article .related-article-title,
+  .teaser-article .teaser__portrait .read-more,
+  .navbar-top
+   {
+    background: $cl-darkblue;
+  }
+}

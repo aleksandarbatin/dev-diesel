@@ -1,0 +1,233 @@
+// -  MOST SHARED TEASERS - //
+
+.most-title {
+  font-family: $frank-heavy;
+  font-size: calc-rem(24px);
+  padding: 25px 28px 26px;
+  @include blue-gradient;
+  text-align: center;
+  text-transform: uppercase;
+  color:$cl-white;
+  margin-bottom: 25px;
+  @include breakpoint(tablet) {
+    padding: 13px 60px 10px;
+  }
+  @include breakpoint(mobile) {
+    font-size: calc-rem(22px);
+    padding: 13px 17px 10px;
+  }
+  img {
+    vertical-align: middle;
+    @include breakpoint(mobile) {
+          width: 30px;
+        }
+  }
+}
+.teaser__most {
+  width: 31%;
+  float: right;
+  position: relative;
+  top: -130px;
+  top: -moz-calc(-630px);
+  @include breakpoint(mobile) {
+    text-align: left;
+  }
+}
+
+.teaser__most__box {
+  display:table;
+  margin-bottom: 10px;
+  img {
+  vertical-align: middle;
+  display:table-cell;
+  padding-right: 10px;
+  }
+  .teaser__most__content {
+  display:table-cell;
+  width:100%;
+  vertical-align: top;
+  }
+  .category-title {
+  font-family:$frank-cndmed;
+  font-size: calc-rem(16px);
+  line-height: calc-rem(16px);
+  text-transform: uppercase;
+  color:$cl-blue;
+  margin-bottom: 10px;
+  @include breakpoint(mobile) {
+    display: block;
+    text-align: left;
+    margin-bottom: calc-rem(5px);
+  }
+  span {
+    display: inline-block;
+    border-bottom: 1px solid $cl-blue;
+    padding-bottom: 0px;
+    @include breakpoint(tablet) {
+      line-height: calc-rem(18px);
+    }
+  }
+  }
+  .title {
+  font-family: $frank-demi;
+  font-size: calc-rem(18px);
+  line-height: 16px;
+  color:$cl-black;
+  text-transform: uppercase;
+  @include breakpoint(tablet) {
+    font-size: calc-rem(20px);
+    margin-bottom: calc-rem(20px);
+  }
+  @include breakpoint(mobile) {
+    font-size: calc-rem(18px);
+    text-align: left;
+    }
+  @media screen and (max-width: 350px) {
+    font-size: calc-rem(14px);
+    line-height: 1;
+  }
+  }
+  .content {
+  font-family: $frank-mid;
+  font-size: calc-rem(15px);
+  line-height: 15px;
+  color:$cl-black;
+  @include breakpoint(tablet) {
+    display: none;
+    }
+  }
+}
+
+//TEASER SECOND
+
+.teaser-second {
+  .teaser__most {
+    @include breakpoint(tablet) {
+    width:100%;
+    clear:both;
+    float:none;
+    top:0;
+    margin-bottom: 80px;
+    }
+    @include breakpoint(mobile) {
+      margin-bottom: 130px;
+      display: inline-block;
+      width: 75%;
+    }
+   .teaser__most__box {
+    @include breakpoint(tablet) {
+    display:inline-block;
+    width: 23.6%;
+    margin-right: 1.3%;
+    }
+    @include breakpoint(mobile) {
+      width: 30%;
+      margin-right: 3.3%;
+    }
+    img {
+    @include breakpoint(tablet) {
+      width:100%;
+      height: 150px;
+      object-fit: cover;
+      margin-bottom: calc-rem(15px);
+      padding-right: 0;
+      }
+    @include breakpoint(mobile) {
+      margin-bottom: calc-rem(10px);
+      height: auto;
+      }
+    }
+  }
+  .teaser__most__box:nth-child(4n+5) {
+    margin-right: 0;
+    @include breakpoint(mobile) {
+      margin-right: 3.3%;
+    }
+  }
+  .teaser__most__box:nth-child(4) {
+    @include breakpoint(mobile) {
+      margin-right: 0;
+    }
+  }
+  .teaser__most__box:nth-child(7) {
+    @include breakpoint(mobile) {
+      margin-right: 0;
+    }
+  }
+
+}
+}
+
+//  TEASER THIRD
+
+.teaser-third {
+  .teaser__most {
+    _top:-624px;
+    _position: relative;
+    _display:inline-block;
+    _float:right;
+    @include breakpoint(tablet) {
+    display: inline-block;
+    width: 47%;
+    float: left;
+    top: 0;
+    clear: both;
+    }
+    @include breakpoint(mobile) {
+      width: 100%;
+      margin-bottom: 140px;
+    }
+    .teaser__most__box {
+    @include breakpoint(tablet) {
+    display:inline-block;
+    width:23%;
+    margin-right: 1.6%;
+    }
+    @include breakpoint(mobile) {
+      width: 30%;
+      margin-right: 3.3%;
+    }
+    img {
+    @include breakpoint(tablet) {
+      display:block;
+      padding:0;
+      width:100%;
+      object-fit: cover;
+      margin-bottom: 15px;
+      }
+    }
+     .teaser__most__content {
+      @include breakpoint(tablet) {
+      display:block;
+      width:100%;
+      }
+      .category-title {
+        display: block;
+      }
+      .content {
+        @include breakpoint(tablet) {
+          display:none;
+          }
+        }
+      }
+    }
+    .teaser__most__box:nth-child(4) {
+      @include breakpoint(mobile) {
+        margin-right: 0;
+      }
+    }
+    .teaser__most__box:nth-child(5) {
+      @include breakpoint(tablet) {
+      margin-right: 0;
+      }
+      @include breakpoint(mobile) {
+      margin-right: 2%;
+      }
+    }
+    .teaser__most__box:nth-child(7) {
+      @include breakpoint(mobile) {
+        margin-right: 0;
+      }
+    }
+  }
+}

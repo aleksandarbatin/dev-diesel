@@ -1,0 +1,51 @@
+// BUTTONS
+
+.read-more {
+  font-size: calc-rem(14px);
+  font-family: $frank-mid;
+  display: inline-block;
+  padding: 16px 38px;
+  line-height: calc-rem(10px);
+  text-transform: uppercase;
+  color: #000;
+  background-color: #FFF;
+  text-decoration: none;
+  @media screen and (max-width: 1160px)  {
+      padding: 12px 30px;
+      font-size: calc-rem(11px);
+  }
+  @include breakpoint(tablet) {
+  padding: 12px 40px;
+  }
+}
+
+// LOAD MORE BUTTON
+.load-more {
+  clear: both;
+  text-align: center;
+  font-family: $frank-cndmed;
+  margin-bottom: calc-rem(100px);
+  margin-bottom: -moz-calc(0px);
+  @include breakpoint(tablet) {
+    margin-bottom: 5%;
+  }
+  @include breakpoint(mobile) {
+    margin-bottom: 70px;
+  }
+  .read-more {
+    @include blue-gradient;
+    color:$cl-white;
+    padding: 22px 70px 20px;
+     @include breakpoint(tablet) {
+     font-size: calc-rem(16px);
+     padding: 24px 60px 20px;
+     margin-top: 0px;
+     margin-bottom: 50px;
+     @include breakpoint(mobile) {
+      margin-bottom: 0;
+      font-size: calc-rem(14px);
+     padding: 20px 40px 18px;
+     }
+   }
+  }
+}

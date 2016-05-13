@@ -1,0 +1,659 @@
+//ARTICLE
+
+.view-article {
+	margin-top: 30px;
+	.container {
+		height:auto;
+		overflow: hidden;
+	}
+}
+
+.view-article__text {
+	width:80%;
+	float:right;
+	padding: 00px 130px 30px 30px;
+	text-align: center;
+	margin-bottom: 80px;
+	@include breakpoint(tablet) {
+		margin-bottom: 0px;
+	}
+	@include breakpoint(mobile) {
+		width:100%;
+		padding: 0px 45px 0;
+	}
+	.category-title {
+	font-family: $frank-cndmed;
+  font-size: calc-rem(16px);
+  line-height: 18px;
+  text-transform: uppercase;
+  color:$cl-blue;
+  margin-top: 10px;
+	}
+	.post-date {
+		display: block;
+    font-family: $frank-demi;
+    font-size:calc-rem(14px);
+    line-height: 18px;
+    color: #deddde;
+    margin-top: 20px;
+    margin-bottom: calc-rem(10px);
+  }
+	.title {
+	font-family: $frank-demi;
+	font-size: calc-rem(40px);
+	line-height: calc-rem(38px);
+	text-transform: uppercase;
+	text-align: center;
+	@include breakpoint(mobile) {
+		font-size: calc-rem(30px);
+		}
+	}
+	.text-important {
+		font-family: $frank-mid;
+		font-size: calc-rem(25px);
+		line-height:calc-rem(35px);
+		text-align: justify;
+		margin-top: 50px;
+		@include breakpoint(mobile) {
+			font-size: calc-rem(20px);
+			line-height: 1.35;
+			margin-top: 30px;
+		}
+	}
+	.text {
+		font-family: $frank-mid;
+		@extend .text-important;
+		color:#686868;
+		margin-top: 35px;
+		@include breakpoint(mobile) {
+			font-size: calc-rem(20px);
+			line-height: 1.35;
+			margin-top: 30px;
+		}
+		&:nth-of-type(4){
+			margin-top: 0px;
+			margin-bottom: 30px;
+		}
+	}
+	.subtitle-text {
+		@extend .text-important;
+	}
+	.teaser__citation-longer {
+	 position: relative;
+	 left:-100px;
+   height:auto !important;
+   display: block;
+   width:100%;
+   padding-right: 20px;
+   margin-top: 40px;
+   margin-bottom: 30px;
+   @include breakpoint(tablet) {
+   		left:-90px;
+   }
+   @include breakpoint(mobile) {
+   	left:0;
+   	height:auto;
+   	padding: 0;
+   	margin-top: 25px;
+   	margin-right: 0;
+   	margin-bottom: 30px;
+   }
+   .citation-wrapper {
+   		height:auto;
+   		text-align: left;
+   		img {
+   			@include breakpoint(mobile) {
+   				margin-left: -15px;
+   			}
+   		}
+   	.citation {
+   		top:15px;
+   		position:static;
+   		padding-right: 200px;
+   		text-align: left;
+   		margin: -100px 0 25px 100px;
+   		@include breakpoint(tablet) {
+   			padding-right:100px;
+		    margin-top: -100px;
+		    margin-left: 45px;
+   		}
+   		@include breakpoint(mobile) {
+   			font-size: calc-rem(38px);
+   			padding-right: 20px;
+		    margin-top: -100px;
+				margin-left: 29px;
+   		}
+   		img {
+   			display:none;
+   			@include breakpoint(mobile) {
+   				width:50px;
+   				display:inline-block;
+   				position:static;
+   				vertical-align: middle;
+   				margin-left: 10px;
+   			}
+   		}
+   	}
+   	.btn-tweet {
+   		@include blue-gradient;
+   		color:$cl-white;
+   		font-family: $frank-mid;
+   		font-size: calc-rem(14px);
+   		text-transform: uppercase;
+   		line-height: calc-rem(50px);
+   		padding:10px 20px;
+   		text-decoration: none;
+   		margin-left: 12%;
+   		margin-top: 20px;
+   		@include breakpoint(tablet) {
+   			margin-left: 7%;
+   		}
+   		@include breakpoint(mobile) {
+			float:right;
+			line-height: calc-rem(14px);
+			margin-top: 0;
+			padding: 15px 31px;
+   		  }
+    	}
+	 	}
+	}
+}
+
+.text-tags {
+	clear:both;
+	float:left;
+	font-family: $frank-heavy;
+	font-size: calc-rem(15px);
+	text-transform: uppercase;
+	margin-top: 25px;
+	margin-bottom: -moz-calc(30px);
+	@include breakpoint(tablet) {
+		margin-bottom: 30px;
+		float:left;
+	}
+	@include breakpoint(mobile) {
+		margin-bottom: 50px;
+	}
+	span {
+		padding-right: 15px;
+		@include breakpoint(mobile) {
+			padding-right: 15px;
+		}
+	}
+}
+
+.article-social-icons {
+	display:block;
+	float:left;
+	width:20%;
+	padding:20px;
+	margin-top: 100px;
+	@include breakpoint(mobile) {
+		display:none;
+	}
+	li {
+		display:block;
+		text-align: center;
+		padding:20px 20px;
+	}
+	a {
+		text-decoration: none;
+	}
+	span {
+		font-family: $frank-heavy;
+		font-size: calc-rem(18px);
+		line-height: calc-rem(16px);
+		background-color: $cl-blue;
+		color:$cl-white;
+		width:90px;
+		display:inline-block;
+		padding:7px 10px;
+		text-transform: uppercase;
+	}
+}
+
+// ARTICLE -- TEASER RELATED ARTICLE
+
+.teaser-article {
+	width:68%;
+	float: right;
+	margin-right: 10%;
+	@include breakpoint(tablet) {
+		width:100%;
+		clear:both;
+		margin-right: 0;
+	}
+	@include breakpoint(mobile) {
+		width:100%;
+		text-align: center;
+	}
+	.teaser__box {
+		width:48%;
+		margin-bottom: 0px;
+		@include breakpoint(tablet) {
+			width:48%;
+		}
+		@include breakpoint(mobile) {
+			width:85%;
+			float:none;
+			margin-bottom: 160px;
+		}
+		.teaser__box-content {
+			@include breakpoint(mobile) {
+				_top: 32%;
+				height: auto;
+			}
+			.category-title {
+				span {
+					display: inline-block;
+					border-bottom: 1px solid #376fa7;
+					padding-bottom: 0px;
+				}
+			}
+		}
+		.image-holder-hover {
+			img {
+				width:100%;
+			}
+		}
+  }
+	.related-article-title {
+	  font-family: $frank-heavy;
+  	font-size: calc-rem(20px);
+  	padding: 25px 28px 26px;
+  	text-transform: uppercase;
+  	color:$cl-white;
+  	@include blue-gradient;
+  	text-align: center;
+  	margin-bottom: 30px;
+  	@include breakpoint (tablet) {
+  		padding:18px 25px 16px;
+  	}
+  	@include breakpoint(mobile) {
+  		width:75%;
+  		margin:0 auto 30px;
+  		padding:12px 10px 10px;
+  		font-size: calc-rem(14px);
+  	}
+  	h2 {
+			@include breakpoint(mobile) {
+				font-size: calc-rem(16px);
+			}
+  	img {
+  		vertical-align: middle;
+  		@include breakpoint(mobile) {
+  			width:35px;
+  			vertical-align: middle;
+  			}
+  		}
+  	}
+	}
+	.teaser__social {
+		width:48%;
+		float:left;
+		clear:both;
+		margin-right: 4%;
+		left:0;
+		@include breakpoint(tablet) {
+			width:48%;
+			float:right;
+			margin-right: 0px;
+			clear:none;
+			left:0;
+			margin-bottom: 60px;
+		}
+		@include breakpoint(mobile) {
+			width:100%;
+			margin-bottom: 50px;
+		}
+		.image-wrapper {
+	    background-image: url('../../assets/img/obama_cloud.jpg');
+	    @include image-wrapper-content__social;
+	  }
+	}
+	.teaser__most {
+		width:48%;
+		float:left;
+		margin-right: 4%;
+		position:relative;
+		top:-400px;
+		top: -moz-calc(-395px);
+		@include breakpoint(tablet) {
+		float:none;
+		width:100%;
+		clear:both;
+		position:initial;
+		top:0;
+		margin-bottom: 50px;
+		@include breakpoint(mobile) {
+			width: 75%;
+			margin: 0 auto 80px;
+		  }
+		}
+		.teaser__most__box {
+    	@include breakpoint(tablet) {
+    	display:inline-block;
+    	width: 23.6%;
+    	margin-right: 1.3%;
+    	}
+    	@include breakpoint(mobile) {
+      width: 30%;
+      margin-right: 3.3%;
+    	}
+			.image-wrapper {
+        background-image: url('../../assets/img/xman_most.jpg');
+        @include image-wrapper-content__most;
+      }
+	 	}
+	 	.most-title {
+      padding:25px 20px 22px;
+	 		font-size: calc-rem(30px);
+	 		@include breakpoint(tablet) {
+	 			padding:20px 20px 18px;
+	 			font-size: calc-rem(30px);
+	 		}
+	 		@include breakpoint(mobile) {
+	 			padding: 16px 20px 11px;
+    		font-size: 1.4rem;
+	 		}
+	 		img {
+	 			@include breakpoint(mobile) {
+	 			width:30px;
+	 		  }
+	 		}
+	 	}
+	 	.teaser__most__box:nth-of-type(4) {
+    	@include breakpoint(tablet) {
+    	margin-right: 0;
+    	}
+    	@include breakpoint(mobile) {
+    		margin-right: 3.3%;
+    	}
+		}
+		.teaser__most__box:nth-of-type(3) {
+     margin-right: 0;
+     @include breakpoint(tablet) {
+     	margin-right: 1.3%;
+      }
+      @include breakpoint(mobile) {
+      	margin-right: 0;
+      }
+		}
+		.teaser__most__box:nth-of-type(9) {
+     margin-right: 0;
+     @include breakpoint(tablet) {
+     	margin-right: 0;
+      }
+		}
+	}
+	.teaser__portrait {
+		position:relative;
+		width:48%;
+		float:left;
+		margin-right: 4%;
+		margin-bottom: 70px;
+		@include breakpoint(tablet) {
+		width:48%;
+		float:left;
+		margin-right: 2%;
+		margin-bottom: 60px;
+		}
+		@include breakpoint(mobile) {
+			width:100%;
+			margin-bottom:80px;
+		}
+		.title-wrapper {
+        float: none;
+        width: 100%;
+        text-align: center;
+        @include breakpoint(tablet) {
+          width: 60%;
+        }
+        @media screen and (max-width: 950px) {
+          width: 50%;
+      	}
+        @media screen and (max-width: 780px) {
+          width: 43%;
+          padding: 22px 0px 0 0%;
+      	}
+        @include breakpoint(mobile) {
+          width: 70%;
+          padding: 22px 0px 0 22%;
+        }
+        @media screen and (max-width: 570px) {
+    	  width: 60%;
+        padding: 22px 0px 0 0;
+      	}
+        @media screen and (max-width: 415px) {
+    	  width: 43%;
+      	}
+        @media screen and (max-width: 370px) {
+          padding: 10px 0 0 5%;
+      	}
+        .category-title {
+          @media screen and (max-width: 370px) {
+            margin-bottom: 35px;
+        	}
+        }
+		}
+		.content {
+			position: absolute;
+			top: 60%;
+			left: -1%;
+			text-align: center;
+			width: 42%;
+			@media screen and (max-width: 1185px) {
+			 top: 59%;
+			}
+			@media screen and (max-width: 1033px) {
+				top: 57%;
+			}
+			@include breakpoint(tablet) {
+				top: 69%;
+				left: 5%;
+				width: 31%;
+				font-size: calc-rem(16px);
+			}
+			@media screen and (max-width: 900px) {
+				left: 2%;
+			}
+			@media screen and (max-width: 810px) {
+				font-size: calc-rem(14px);
+				width: 22%;
+				top: 66%;
+				left: 0;
+			}
+			@include breakpoint(mobile) {
+				display: none;
+			}
+		}
+		.head-over {
+			width: 100%;
+	    margin-top: -93px;
+			float: right;
+	    @include breakpoint(tablet) {
+	      width: 268px;
+	      margin-top: -200px;
+	    }
+	  }
+		.portrait-hash {
+			@include breakpoint(mobile) {
+				position: absolute;
+				left: 21%;
+				bottom: 0px;
+			}
+			@media screen and (max-width: 570px) {
+			left: 5%;
+			}
+		}
+		.share {
+        display: none;
+        @include breakpoint(tablet) {
+          display: inline-block;
+          text-align: left;
+          position: absolute;
+          top: 89%;
+          left: 14%;
+          margin-bottom: 0;
+          width: 27%;
+          font-size: calc-rem(18px);
+        }
+        @media screen and (max-width: 900px) {
+           top: 94%;
+           left: 8%;
+        }
+        @media screen and (max-width: 810px) {
+          font-size: calc-rem(16px);
+          width: 22%;
+          top: 92%;
+          left: 2%;
+      	}
+        @include breakpoint(mobile) {
+          top: 91%;
+          left: 39%;
+        }
+        @media screen and (max-width: 570px) {
+          top: 80%;
+          left: 19%;
+      	}
+        @media screen and (max-width: 415px) {
+          top: 70%;
+          left: 8%;
+      	}
+		}
+		.read-more {
+		@include blue-gradient;
+		color:$cl-white;
+		padding: 20px 40px;
+		position:absolute;
+		bottom: -14px;
+		left: 122px;
+		@include shadow;
+		@include breakpoint(tablet) {
+		 bottom: 8%;
+		 left: 53%;
+		 font-size: calc-rem(14px);
+			}
+		@include breakpoint(mobile) {
+			font-size: calc-rem(14px);
+			padding: 15px 15px;
+			bottom: 18%;
+			left: 35%;
+			width: 120px;
+		}
+		@media screen and (max-width: 570px) {
+			bottom: 12%;
+			left: 65%;
+		}
+		@media screen and (max-width: 370px) {
+			left: 56%;
+		}
+		}
+	}
+}
+
+//Article Teaser
+
+.teaser-article {
+	.teaser__box {
+		@include breakpoint(tablet) {
+		}
+		@include breakpoint(mobile) {
+			@include teaser__box__mobile;
+		}
+	}
+	.teaser__box:nth-of-type(4) {
+		margin-right: 0px;
+		@include breakpoint(tablet) {
+			margin-right: 2%;
+			float:left;
+			clear:both;
+		}
+		.image-wrapper {
+	    background-image: url('../../assets/img/headphones.jpg');
+	    @include image-wrapper-content;
+			width: 100%;
+	  }
+	}
+	.teaser__box:nth-of-type(5) {
+		float:right;
+		margin-right: 0;
+		position:relative;
+		top:-160px;
+		//margin-bottom: 60px;
+		@include breakpoint(tablet) {
+		margin-right: 0px;
+		top:0;
+		}
+		.image-wrapper {
+	    background-image: url('../../assets/img/jumper.jpg');
+	    @include image-wrapper-content;
+			width: 100%;
+	  }
+	}
+	.teaser__box:nth-of-type(6) {
+		float:right;
+		margin-right: 0;
+		position:relative;
+		top:-110px;
+		top: -moz-calc(-20px);
+		margin-bottom: 60px;
+		@include breakpoint(tablet) {
+		float:left;
+		position:static;
+		margin-right: 4%;
+		}
+		@include breakpoint(mobile) {
+			top:0;
+			margin-right: 0;
+			margin-bottom: 120px;
+		}
+		.image-wrapper {
+	    background-image: url('../../assets/img/games.jpg');
+	    @include image-wrapper-content;
+			width: 100%;
+	  }
+	}
+	.teaser__box:nth-of-type(7) {
+		float: right;
+    clear: both;
+		margin-right: 0;
+		position:relative;
+		top:-110px;
+		top: -moz-calc(40px);
+		margin-bottom: 60px;
+		@include breakpoint(tablet) {
+		float: right;
+		clear:none;
+		position:static;
+		margin-right: 0;
+		}
+		@include breakpoint(mobile) {
+			top:0px;
+			margin-bottom: 120px;
+		}
+		.image-wrapper {
+	    background-image: url('../../assets/img/flyer.jpg');
+	    @include image-wrapper-content;
+			width: 100%;
+	  }
+	}
+}
+
+.teaser__most__box.tablet-shown.mobile-shown {
+	margin-right: 0px;
+}
+
+//Scroll fixed left list social-icons
+
+.sticky {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 100px;
+}
+
+.sticky:before,
+.sticky:after {
+    content: '';
+    display: table;
+}

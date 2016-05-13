@@ -1,0 +1,52 @@
+//CSS for IE10
+
+html[data-useragent*='MSIE 10.0'] {
+  //Index
+ .video__wrapper {
+   @include blue-gradient;
+ }
+ .teaser-second .teaser__most {
+   top: -630px;
+   @include breakpoint(tablet) {
+     top: 0;
+   }
+ }
+.video-wide {
+  top: -200px;
+  @include breakpoint(tablet) {
+    top: 0;
+  }
+}
+.teaser-third .teaser-third__wrapper-2 .teaser__box:nth-of-type(4) {
+  margin-bottom: 100px;
+  @include breakpoint(tablet) {
+    margin-bottom: 50px;
+  }
+}
+
+.dropdown__content .subcategory li {
+  padding-top: 0;
+  font-size: 1.4;
+  line-height: 1.6;
+}
+
+.load-more {
+  @include breakpoint(mobile) {
+    margin-top: 100px;
+  }
+}
+
+//Entertainment page
+#ent {
+  .video-wide {
+    top: 0;
+    .video__wrapper {
+      background-size: 100% 100%, cover!important;
+    }
+  }
+
+  .ent-teaser-second .container .teaser__box {
+    margin-bottom: 150px;
+  }
+}
+}

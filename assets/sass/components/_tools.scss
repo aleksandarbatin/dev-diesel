@@ -1,0 +1,51 @@
+//TOOLS
+
+.share {
+ display:none;
+ @include breakpoint(tablet) {
+   display: block;
+   font-family: $frank-mid;
+   font-size: calc-rem(14px);
+   line-height: calc-rem(10px);
+   color: #376fa7;
+   text-transform: uppercase;
+   margin-bottom: 15px;
+ }
+ @include breakpoint(mobile) {
+   font-size: calc-rem(16px);
+   margin-bottom: calc-rem(18px);
+ }
+ span {
+   font-family: $frank-heavy;
+ }
+}
+
+.video-title {
+  position: absolute;
+  top: -20px;
+  left: 0;
+  padding-top: 2px;
+  padding-left: 15px;
+  @include blue-gradient;
+  width: 60%;
+  height: 20px;
+  color: $cl-white;
+  text-transform: uppercase;
+  font-family: $frank-cndmed;
+  font-size: calc-rem(12px);
+  @include breakpoint(tablet) {
+    padding-top: 0px;
+    padding-left: 25px;
+  }
+  img{
+    width: 6%;
+    display: inline-block;
+    padding-top: 3px;
+    margin-right: 12px;
+    @include breakpoint(tablet) {
+      width: 7%;
+      height: 72%;
+      padding-top: 6px;
+    }
+  }
+}

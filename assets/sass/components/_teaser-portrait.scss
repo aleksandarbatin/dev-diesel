@@ -1,0 +1,433 @@
+// - BLUE TEASER OR TEASER-PORTRAIT //
+
+// Teaser Teaser-Portrait
+.teaser {
+  .teaser__portrait {
+    display:inline-block;
+    position: relative;
+    width: 31%;
+    float: right;
+    top: -100px;
+    margin-bottom: -moz-calc(150px);
+    @include breakpoint(tablet) {
+      width: 48%;
+      height: 310px;
+      top: 0;
+      margin-bottom: 20px;
+    }
+    @include breakpoint(mobile) {
+      width: 100%;
+      margin-bottom: 130px;
+    }
+    .title-wrapper {
+      float: none;
+      width: 100%;
+      //padding: 20px 0 0 10%;
+      text-align: center;
+      @include breakpoint(tablet) {
+        width: 60%;
+      }
+      @media screen and (max-width: 780px) {
+        width: 60%;
+        padding: 22px 0;
+    	}
+      @media screen and (max-width: 570px) {
+  	  width: 60%;
+      padding: 22px 0px 0 0;
+    	}
+      @media screen and (max-width: 415px) {
+  	  width: 43%;
+    	}
+      @media screen and (max-width: 370px) {
+        padding: 10px 0 0 5%;
+    	}
+      .category-title {
+        @media screen and (max-width: 370px) {
+          margin-bottom: 10px;
+      	}
+      }
+    }
+    .portrait-hash {
+      @include breakpoint(mobile) {
+        position: absolute;
+        left: 21%;
+        bottom: 0px;
+      }
+      @media screen and (max-width: 570px) {
+  	  left: 5%;
+    	}
+    }
+    .content {
+      position: absolute;
+      top: 45%;
+      left: -1%;
+      text-align: center;
+      width: 42%;
+      font-size: 20px;
+      @media screen and (max-width: 1185px) {
+    	 top: 50%;
+    	}
+      @media screen and (max-width: 1033px) {
+    	  top: 48%;
+    	}
+      @include breakpoint(tablet) {
+        top: 69%;
+        left: 5%;
+        width: 31%;
+        font-size: calc-rem(16px);
+      }
+      @media screen and (max-width: 900px) {
+    	  left: 2%;
+    	}
+      @media screen and (max-width: 810px) {
+    	  font-size: calc-rem(14px);
+        width: 22%;
+        top: 66%;
+        left: 0;
+    	}
+      @include breakpoint(mobile) {
+        display: none;
+      }
+    }
+    .share {
+      display: none;
+      @include breakpoint(tablet) {
+        display: inline-block;
+        text-align: left;
+        position: absolute;
+        top: 89%;
+        left: 14%;
+        margin-bottom: 0;
+        width: 27%;
+      }
+      @media screen and (max-width: 900px) {
+         top: 94%;
+         left: 8%;
+      }
+      @media screen and (max-width: 810px) {
+        font-size: calc-rem(16px);
+        width: 22%;
+        top: 92%;
+        left: 2%;
+    	}
+      @include breakpoint(mobile) {
+        top: 91%;
+        left: 39%;
+      }
+      @media screen and (max-width: 570px) {
+        top: 80%;
+        left: 19%;
+    	}
+      @media screen and (max-width: 415px) {
+        top: 70%;
+        left: 7%;
+    	}
+    }
+    .read-more {
+    @include blue-gradient;
+    color:$cl-white;
+    padding: 20px 40px;
+    position:absolute;
+    bottom: -14px;
+    left: 122px;
+    @include shadow;
+    @include breakpoint(tablet) {
+     bottom: 8%;
+     left: 53%;
+     font-size: calc-rem(14px);
+      }
+    @include breakpoint(mobile) {
+      font-size: calc-rem(14px);
+      padding: 15px 15px;
+      bottom: 18%;
+      left: 35%;
+      width: 120px;
+    }
+    @media screen and (max-width: 570px) {
+      bottom: 12%;
+      left: 65%;
+    }
+    @media screen and (max-width: 370px) {
+      left: 56%;
+    }
+    }
+  //Teaser Portrait hover
+  &:hover {
+    .teaser__portrait__header .title {
+      opacity: 0.4;
+      transition: 0.5s;
+    }
+    .portrait-hash {
+      opacity: 1;
+      transition: 0.3s;
+    }
+  }
+  }
+}
+
+
+.teaser__portrait__header {
+  @include blue-gradient;
+  padding: 20px 50px 70px;
+  text-align: center;
+  position: relative;
+  z-index: -1;
+  @include breakpoint(tablet) {
+    height: 200px;
+    text-align: none;
+    padding: 0px;
+  }
+  img {
+    position: absolute;
+    left: 16px;
+    bottom: 0px;
+    opacity: 0.2;
+  }
+  .category-title {
+    font-family: $frank-cndmed;
+    font-size: calc-rem(16px);
+    line-height: calc-rem(16px);
+    color: #FFF;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    @include breakpoint(tablet) {
+      font-size: calc-rem(14px);
+      margin-bottom: 25px;
+    }
+    span {
+      display: inline-block;
+      border-bottom: 1px solid $cl-white;
+      padding-bottom: 0px;
+      @include breakpoint(tablet) {
+        line-height: calc-rem(18px);
+      }
+    }
+  }
+  .title {
+    font-family: $frank-cndmed;
+    color: $cl-white;
+    font-size: calc-rem(46px);
+    text-transform: uppercase;
+    @include breakpoint(tablet) {
+      font-size: calc-rem(26px);
+      line-height: 1.2;
+    }
+    @include breakpoint(mobile) {
+      font-size: calc-rem(24px);
+      line-height: 1.2;
+    }
+  }
+}
+
+.title-wrapper {
+  @include breakpoint(tablet) {
+   text-align: center;
+   float: left;
+   width: 50%;
+   padding: 20px 30px;
+  }
+   @media screen and (max-width: 850px) {
+     padding: 20px 0px;
+   }
+}
+
+img.head-over {
+    margin-top: -83px;
+    z-index: 1;
+    width: 100%;
+    @include breakpoint(tablet) {
+      margin-top: -207px;
+      width: 270px;
+      float: right;
+    }
+    @include breakpoint(mobile) {
+      //width:80%;
+    }
+  }
+
+// TEASER SECOND SECTION //
+
+.teaser-second {
+    .teaser__portrait {
+      position: relative;
+      margin-right: 3.4%;
+      //left: -moz-calc(1%);
+      @include breakpoint(tablet) {
+        float: left;
+      }
+      @include breakpoint(mobile) {
+        margin-bottom: 140px;
+      }
+      &::after {
+        @include breakpoint(tablet) {
+          clear: both;
+        }
+      }
+      .title-wrapper {
+        float: none;
+        width: 100%;
+        text-align: center;
+        @include breakpoint(tablet) {
+          width: 60%;
+        }
+        @media screen and (max-width: 950px) {
+          width: 50%;
+      	}
+        @media screen and (max-width: 780px) {
+          width: 43%;
+          padding: 22px 0px 0 0%;
+      	}
+        @include breakpoint(mobile) {
+          width: 70%;
+          padding: 22px 0px 0 22%;
+        }
+        @media screen and (max-width: 570px) {
+    	  width: 60%;
+        padding: 22px 0px 0 0;
+      	}
+        @media screen and (max-width: 415px) {
+    	  width: 43%;
+      	}
+        @media screen and (max-width: 370px) {
+          padding: 10px 0 0 5%;
+      	}
+        .category-title {
+          @media screen and (max-width: 370px) {
+            margin-bottom: 10px;
+        	}
+        }
+      }
+      .portrait-hash {
+        @include breakpoint(mobile) {
+          position: absolute;
+          left: 21%;
+          bottom: 0px;
+        }
+        @media screen and (max-width: 570px) {
+    	  left: 5%;
+      	}
+      }
+      .content {
+        position: absolute;
+        top: 60%;
+        left: -1%;
+        text-align: center;
+        width: 42%;
+        @media screen and (max-width: 1185px) {
+      	 top: 59%;
+      	}
+        @media screen and (max-width: 1033px) {
+      	  top: 57%;
+      	}
+        @include breakpoint(tablet) {
+          top: 69%;
+          left: 5%;
+          width: 31%;
+          font-size: calc-rem(16px);
+        }
+        @media screen and (max-width: 900px) {
+      	  left: 2%;
+      	}
+        @media screen and (max-width: 810px) {
+      	  font-size: calc-rem(14px);
+          width: 22%;
+          top: 66%;
+          left: 0;
+      	}
+        @include breakpoint(mobile) {
+          display: none;
+        }
+      }
+      .share {
+        display: none;
+        @include breakpoint(tablet) {
+          display: inline-block;
+          text-align: left;
+          position: absolute;
+          top: 89%;
+          left: 14%;
+          margin-bottom: 0;
+          width: 27%;
+        }
+        @media screen and (max-width: 900px) {
+           top: 94%;
+           left: 8%;
+        }
+        @media screen and (max-width: 810px) {
+          font-size: calc-rem(16px);
+          width: 22%;
+          top: 92%;
+          left: 2%;
+      	}
+        @include breakpoint(mobile) {
+          top: 91%;
+          left: 39%;
+        }
+        @media screen and (max-width: 570px) {
+          top: 80%;
+          left: 19%;
+      	}
+        @media screen and (max-width: 415px) {
+          top: 70%;
+          left: 19%;
+      	}
+      }
+      .read-more {
+      @include blue-gradient;
+      color:$cl-white;
+      padding: 20px 40px;
+      position:absolute;
+      bottom: -14px;
+      left: 122px;
+      @include shadow;
+      @include breakpoint(tablet) {
+       bottom: 8%;
+       left: 53%;
+       font-size: calc-rem(12px);
+        }
+      @include breakpoint(mobile) {
+        font-size: calc-rem(14px);
+        padding: 15px 15px;
+        bottom: 18%;
+        left: 35%;
+        width: 120px;
+      }
+      @media screen and (max-width: 570px) {
+        bottom: 12%;
+        left: 65%;
+      }
+      @media screen and (max-width: 370px) {
+        left: 56%;
+      }
+    }
+    &:hover {
+      .title {
+        opacity: 0.3;
+        transition: 0.5s;
+      }
+      .portrait-hash {
+        opacity: 1;
+        transition: 0.5s;
+      }
+    }
+  }
+  img.head-over {
+    margin-top: -59px;
+    @include breakpoint(tablet) {
+      width: 268px;
+      margin-top: -200px;
+    }
+  }
+}
+
+//Teaser Second Portrait
+.teaser__portrait {
+  float:left;
+  width: 29%;
+  @include breakpoint(tablet) {
+    width: 46%;
+  }
+  @include breakpoint(mobile) {
+    width: 100%;
+  }
+}

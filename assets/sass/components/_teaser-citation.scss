@@ -1,0 +1,258 @@
+//TEASER CITATION
+
+.teaser__citation {
+  height: 440px;
+  width: 31.5%;
+  @include breakpoint(tablet) {
+  display: inline-block;
+  position: relative;
+  }
+  .citation-wrapper {
+  position:relative;
+  height:65%;
+  .quotes {
+    display: inline;
+    width: 174px;
+    height: 138px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-image: url('../../assets/img/quotes.png');
+    @include breakpoint(mobile) {
+      left:20px;
+    }
+  }
+  .citation {
+  width: 90%;
+  font-family: $frank-heavy;
+  font-size: calc-rem(38px);
+  line-height: 50px;
+  color: #376fa7;
+  text-transform: uppercase;
+  position:relative;
+  top: 10%;
+  left: 16%;
+  z-index: 1;
+  @include breakpoint(tablet) {
+    width: 73%;
+    padding-right:20%;
+    font-size: calc-rem(34px);
+    line-height: 1;
+    }
+  @include breakpoint(mobile) {
+    padding-right: 20%;
+    font-size: calc-rem(30px);
+    }
+  img {
+    margin-left: 15px;
+    vertical-align: middle;
+    @include breakpoint(mobile) {
+      margin-left: 5px;
+    }
+    }
+  }
+  br {
+    @include breakpoint(tablet) {
+      display:none;
+      }
+    }
+  }
+  .teaser__citation__author {
+  margin-left: 65px;
+  img {
+  display:inline-block;
+  padding-right: 15px;
+  margin-bottom: 30px;
+  }
+  .name {
+  font-family: $frank-mid;
+  font-size: calc-rem(16px);
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  @include breakpoint(tablet) {
+    font-size: calc-rem(18px);
+    }
+  }
+  .profession {
+  font-family: $frank-mid;
+  font-size: calc-rem(14px);
+  letter-spacing: 2px;
+  color:$cl-blue;
+  text-transform: uppercase;
+  text-align: left;
+  }
+  .aligner {
+  vertical-align: top;
+  display: inline-block;
+  padding-top: 20px;
+  }
+  }
+  .teaser__citation__social {
+    display: none;
+    @include breakpoint(tablet) {
+      display: block;
+      position: absolute;
+      left: 0;
+      bottom: -75%;
+      width: 100%;
+    }
+    @include breakpoint(mobile) {
+      display: block;
+    }
+    }
+   li {
+     float: left;
+     margin-right: 10%;
+     img {
+       height: 20px;
+     }
+   }
+  }
+
+
+.teaser__citation-longer {
+  @extend .teaser__citation;
+  height: 625px;
+  display: inline-block;
+  float:left;
+  @include breakpoint(tablet) {
+    float:left;
+    width:47%;
+    height:480px;
+    display: inline-block;
+  }
+  @include breakpoint(mobile) {
+    width: 100%;
+    text-align: left;
+    margin-bottom: 140px;
+    height:400px !important;
+  }
+  .citation-wrapper {
+    height: auto;
+    margin-bottom: 10px;
+    @include breakpoint(tablet) {
+      height:auto;
+    }
+    .citation {
+      @include breakpoint(tablet) {
+      font-size: calc-rem(40px);
+      padding-right: 25%;
+      top:30px;
+      }
+      @include breakpoint(tablet) {
+        padding-right: 15%;
+      }
+      @include breakpoint(mobile) {
+        font-size: calc-rem(32px);
+        padding-right: 8%;
+      }
+      span {
+      display:none;
+       @include breakpoint(tablet) {
+       display:block;
+       }
+      }
+      img {
+      bottom: 1%;
+      right: 21%;
+       @include breakpoint(tablet) {
+       bottom: 3%;
+       right: 18%;
+       }
+       @include breakpoint(mobile) {
+         right: 15%;
+       }
+      }
+      br {
+       @include breakpoint(tablet) {
+       display:none;
+       }
+    }
+  }
+  }
+  .teaser__citation__author {
+    margin-left: 57px;
+    @include breakpoint(tablet) {
+      margin-top: 30px;
+    }
+  }
+}
+.teaser__citation-longer:hover {
+  .quotes {
+   background-image: url('../../assets/img/quotes_hover.png');
+  }
+  .citation {
+    color: $cl-black;
+  }
+  .teaser__citation__social {
+      display: block;
+  }
+}
+
+
+// TEASER SECOND
+.teaser-second {
+  .teaser__citation {
+    width: 29%;
+    position: relative;
+    right: 6%;
+    @include breakpoint(tablet) {
+    position: static;
+    height: calc-rem(470px);
+    width: 48%;
+    margin-right: 0px;
+    margin-bottom: 7%;
+    }
+    @media screen and (max-width: 850px) {
+      margin-bottom: 15%;
+    }
+    @include breakpoint(mobile) {
+      width: 100%;
+      margin-bottom: 130px;
+      height:auto;
+    }
+    .citation-wrapper {
+      @include breakpoint(mobile) {
+        text-align: left;
+      }
+      .citation {
+        @include breakpoint(mobile) {
+          top:35px;
+          line-height: 1;
+        }
+      }
+    }
+  }
+  .teaser__citation__author {
+    position:static;
+    @include breakpoint(mobile) {
+    float:left;
+    margin-top: 40px;
+    position:static;
+    }
+  }
+  .teaser__citation:hover {
+   .quotes {
+    background-image: url('../../assets/img/quotes_hover.png');
+   }
+   .citation {
+     color: $cl-black;
+   }
+   .teaser__citation__social {
+       display: block;
+   }
+  }
+  .teaser-third .teaser__citation:hover {
+   .quotes {
+    background-image: url('../../assets/img/quotes_hover.png');
+   }
+   .citation {
+     color: $cl-black;
+   }
+   .teaser__citation__social {
+     @include breakpoint(tablet) {
+       display: block;
+     }
+   }
+  }
+}

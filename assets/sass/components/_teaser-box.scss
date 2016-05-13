@@ -1,0 +1,147 @@
+//Teaser Box Global
+.teaser__box {
+  display:inline-block;
+  width: 31%;
+  margin-right: 3.4%;
+  @include breakpoint(tablet) {
+  display: inline-block;
+  width: 48%;
+  margin-right: 4%;
+  }
+  @include breakpoint(mobile) {
+    width:80%;
+    margin-bottom: 60px;
+  }
+  .img-wrapper {
+    width:100%;
+    overflow:hidden;
+  }
+  img {
+    -moz-transition: all 0.3s;
+    -webkit-transition: all 0.3s;
+    transition: all 0.3s;
+    z-index:0;
+    position:relative;
+    @include breakpoint(tablet) {
+    height: 310px;
+    width:100%;
+    }
+    @include breakpoint(mobile) {
+      width: 100%;
+      max-width: 350px;
+      }
+    }
+  }
+
+//Teaser Box Content Global
+.teaser__box-content {
+  background-color: $cl-white;
+  padding: 26px 15px 15px 33px;
+  width: 60%;
+  height: 190px;
+  position: relative;
+  top: -180px;
+  left: 43%;
+  z-index: 2;
+  @include breakpoint(tablet) {
+    padding: 27px 27px 15px;
+  }
+  @include breakpoint(mobile) {
+    text-align: left;
+    position: absolute;
+    top: 43%;
+    left: 43%;
+    padding: 20px;
+    }
+  .title {
+    font-family: $frank-demi;
+    font-size: calc-rem(30px);
+    line-height: 27px;
+    text-transform: uppercase;
+    color: #000;
+    margin-top: 10px;
+    margin-bottom: calc-rem(3px);
+    @include breakpoint(tablet) {
+      font-size: calc-rem(25px);
+      line-height: 1;
+      margin-bottom: calc-rem(16px);
+      margin-top: 0;
+    }
+    @include breakpoint(mobile) {
+      font-family: $frank-cndmed;
+      line-height: 1;
+      font-size: calc-rem(24px);
+      line-height: 1;
+      margin-top: 0;
+      margin-bottom: calc-rem(14px);
+      text-align: left;
+      }
+  }
+  .content {
+    font-family: $frank-mid;
+    font-size: calc-rem(20px);
+    line-height: 16px;
+    color: $cl-black;
+    margin-bottom: 55px;
+    @include breakpoint(tablet) {
+      font-size: calc-rem(18px);
+      margin-bottom: 15px;
+    }
+    @include breakpoint(mobile) {
+      display: none;
+    }
+  }
+  .category-title {
+    font-family: $frank-cndmed;
+    font-size: calc-rem(16px);
+    line-height: 18px;
+    text-transform: uppercase;
+    color:rgb(55,111,167);
+    margin-bottom: calc-rem(10px);
+    @include breakpoint(tablet) {
+      font-size: calc-rem(14px)
+    }
+    @include breakpoint(mobile) {
+      font-size: calc-rem(14px);
+      line-height: 0.6;
+      margin-bottom: calc-rem(10px);
+    }
+    span {
+      display: inline-block;
+      border-bottom: 1px solid $cl-blue;
+      padding-bottom: 0px;
+  		@include breakpoint(tablet) {
+  			line-height: calc-rem(18px);
+  		}
+    }
+  }
+  .post-date {
+    display: block;
+    font-family: $frank-demi;
+    font-size:calc-rem(14px);
+    line-height: 18px;
+    color: #deddde;
+    margin-bottom: calc-rem(10px);
+    @include breakpoint(tablet) {
+      font-size: calc-rem(16px);
+      margin-bottom: calc-rem(4px);
+    }
+    @include breakpoint(mobile) {
+      font-size: calc-rem(12px);
+      margin-bottom: calc-rem(8px);
+    }
+  }
+
+  .read-more {
+    font-family: $frank-mid;
+    border:1px solid black;
+    @include breakpoint(tablet) {
+      font-size: calc-rem(14px);
+      padding: 16px 31px;
+    }
+    @include breakpoint(mobile) {
+      padding: 16px 21px 16px 25px;
+      width: 115px;
+    }
+  }
+}
